@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KESKIA ADM</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.0.0/ol.css">
+</head>
+
+<body class="destination">
+  <header id="navbar-container"></header>
+
+
+  <main class="custom-main">
+    <div class="row style-main">
+
+      <div class="depart col-md-3 text-center d-flex flex-column justify-content-evenly"
+        style="background-color: #FEEAEA;">
+
+        <button class="btn btn-primary mb-1" id="bouton_geoloc">ME GEOLOCALISER</button>
+
+        <h5 class="custom-color">OU</h5>
+
+        <h5 class="custom-color">Veuillez saisir votre<br>Adresse</h5>
+
+        <textarea class="form-control mb-5" rows="3"
+          placeholder="Entrez votre lieux actuel ou votre adresse de départ -ici-"
+          style=" border: 1px solid black;"></textarea>
+
+        <button class="btn btn-success mb-5">OK</button>
+
+      </div>
+
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
+        <div class="carte col-md-auto d-flex flex-column justify-content-center align-items-center" style="background-color: #FEEAEA;">
+          <h5 class="custom-color d-none d-md-block">Carte</h5>
+          <div id="map" class="map"></div>
+        </div>
+        <div class="trajet text-center col-md-auto d-flex justify-content-center align-items-center"
+          style="background-color: #FEEAEA;">
+          <button class="btn btn-calcul">CALCUL DE L'ITINERAIRE</button>
+        </div>
+      </div>
+
+      <!-- <div class="arrivee col-12 col-sm-3 col-md-3" style="background-color: #FEEAEA;"> -->
+
+      <div class="arrivee col-12 col-md-3 text-center d-flex flex-column justify-content-evenly"
+        style="background-color: #FEEAEA;">
+
+        <h5 class="custom-color">Veuillez saisir votre<br>Adresse d'arrivée</h5>
+
+        <textarea class="form-control mb-5" rows="3" placeholder="Entrez l'adresse d'arrivée ici"
+          style=" border: 1px solid black;"></textarea>
+
+        <button class="btn btn-success">OK</button>
+      </div>
+      <!-- </div> -->
+    </div>
+  </main>
+
+
+  <div id="footer-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ol@v9.0.0/dist/ol.js"></script>
+  <script src="./main.js"></script>
+  <script>
+    includeNavbar();
+    includeFooter();
+  </script>
+</body>
+
+</html>
