@@ -10,6 +10,8 @@
     "vite": "^5.1.3"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
     "ol": "latest"
   }
 }
